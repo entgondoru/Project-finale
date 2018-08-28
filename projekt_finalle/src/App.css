@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; }
+
+.displayContainer {
+  width: 100%;
+  height: 54%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: initial;
+  background-position: center; }
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 46%;
+  background-image: url("./Images/Dices.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.input {
+  height: 10%;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 10px; }
+
+.submit {
+  font-size: 1.2em;
+  width: 20%;
+  padding: 5px; }
