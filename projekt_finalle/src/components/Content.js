@@ -21,12 +21,7 @@ class Content extends Component{
 
             </div>
         )}else{
-        return(
-        <div>
-        <h1>Use plus sign instead of spaces,please!</h1>
-            <h2>for example, instead of "in this moment" put in "in+this"moment"</h2>
-        </div>)
-
+        return null;
     }}
 }
 export default Content

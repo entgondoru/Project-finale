@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Content from "./components/Content.js"
-
 class App extends Component {
     constructor(props){
         super(props);
@@ -24,10 +23,10 @@ class App extends Component {
     }
 
     submited=()=>{
-        fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=${this.state.first}&api_key=4867da29d8818eb2ef25cc9c1f43a966&format=json&limit=20`)
+        fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=${this.state.first.replace(" ","+")}&api_key=4867da29d8818eb2ef25cc9c1f43a966&format=json&limit=20`)
             .then((data)=>data.json())
             .then(artist=>this.setState({firsttab:artist.similarartists.artist}));
-        fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=${this.state.second}&api_key=4867da29d8818eb2ef25cc9c1f43a966&format=json&limit=20`)
+        fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=${this.state.second.replace(" ","+")}&api_key=4867da29d8818eb2ef25cc9c1f43a966&format=json&limit=20`)
             .then((data)=>data.json())
             .then(artist=>this.setState({secondtab:artist.similarartists.artist}))
             .then(this.setState({
