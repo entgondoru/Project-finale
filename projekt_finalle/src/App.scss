@@ -1,14 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
 *{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
-
+body{
+  overflow: hidden;
+}
 .main{
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: #141416;
 }
 .displayContainer{
   width: 100%;
@@ -17,9 +21,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-repeat: no-repeat;
-  background-size: initial;
-  background-position: center;
+  color: white;
 }
 .inputContainer{
   display: flex;
@@ -27,10 +29,6 @@
   justify-content: space-around;
   width: 100%;
   height: 46%;
-  background-image: url("./Images/Dices.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 .input{
   height: 10%;
@@ -41,5 +39,73 @@
 .submit{
   font-size: 1.2em;
   width: 20%;
-  padding:5px
+  padding:5px;
+  animation: 2s spin  infinite;
 }
+@keyframes spin{
+
+  100%{transform: rotate(720deg)}
+
+}
+.row{
+display: flex;
+  justify-content: center;
+}
+.col{
+  width: 30%;
+  padding:10px;
+  border-radius: 10px;
+  margin: 10px;
+}
+.bio{
+  font-size: 24px;
+}
+.playcount{
+  animation: 12s color infinite;
+}
+@keyframes color{
+  20%{color:yellow}
+  40%{color:greenyellow}
+  60%{color:green}
+  80%{color:darkgreen}
+  100%{color:white}
+}
+.listeners{
+  animation: 12s color2 infinite;
+}
+@keyframes color2 {
+  20%{color:violet}
+  40%{color:palevioletred}
+  60%{color:mediumvioletred}
+  80%{color:red}
+  100%{color:white}
+}
+.col1{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.tag{
+  font-style: italic;
+}
+.image{
+padding-top: 20px;
+}
+.link{
+  text-decoration: none;
+  color:gray;
+}
+.big{
+  animation: 5s rainbow infinite;
+  font-size: 300px;
+  font-family: 'Tangerine', cursive;
+}
+@keyframes rainbow{
+  0%{color: orange;}
+  10%{color: purple;}
+  20%{color: red;}
+  40%{color: yellow;}
+  60%{color: green;}
+  100%{color: blue;}
+  100%{color: orange;}}
