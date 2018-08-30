@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import blank from "../Images/blank.jpg";
 
 class Content extends Component {
     constructor(props) {
@@ -8,6 +9,7 @@ class Content extends Component {
     render() {
         let text = this.props.states.bio;
         text = text.split("<", 1)[0];
+        if(text.length<10){text="Artist have no shortened bio"}
         if (this.props.states.ready) {
             return (
                 <div className="container">
@@ -23,7 +25,7 @@ class Content extends Component {
                                 users did it!</h3>
                             <h3><span className="tag">{this.props.states.tag}</span> this is first tag of your artist
                             </h3>
-                            <img className="image" alt="../Images/blank.jpg" src={this.props.states.img}/>
+                            <img className="image" alt={blank} src={this.props.states.img}/>
                         </div>
                         <div className="col3 col">
                             <p className="bio">{text}</p>

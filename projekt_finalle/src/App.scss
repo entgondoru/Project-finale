@@ -32,19 +32,19 @@ body{
 }
 .input{
   height: 10%;
-  font-size: 1.2em;
+  font-size: 1.5em;
   text-align: center;
   padding: 10px;
+
 }
 .submit{
   font-size: 1.2em;
   width: 20%;
   padding:5px;
-  animation: 2s spin  infinite;
+  animation: 6s spin  infinite;
 }
 @keyframes spin{
-
-  100%{transform: rotate(720deg)}
+  100%{transform: rotate(1080deg)}
 
 }
 .row{
@@ -59,6 +59,7 @@ display: flex;
 }
 .bio{
   font-size: 24px;
+  text-align: center;
 }
 .playcount{
   animation: 12s color infinite;
@@ -94,10 +95,10 @@ padding-top: 20px;
 }
 .link{
   text-decoration: none;
-  color:gray;
+  color:dimgray;
 }
 .big{
-  animation: 5s rainbow infinite;
+  animation: 8s rainbow infinite;
   font-size: 300px;
   font-family: 'Tangerine', cursive;
 }
@@ -109,3 +110,6 @@ padding-top: 20px;
   60%{color: green;}
   100%{color: blue;}
   100%{color: orange;}}
+h3{
+  font-size: 20px;
+}
